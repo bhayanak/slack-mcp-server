@@ -3,11 +3,11 @@
   "displayName": "Slack MCP Server",
   "description": "VS Code extension that provides a Slack MCP server for AI assistants",
   "version": "0.1.0",
-  "publisher": "slack-mcp",
+  "publisher": "bhayanak",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/slack-mcp/slack-mcp-server"
+    "url": "https://github.com/bhayanak/slack-mcp-server"
   },
   "engines": {
     "vscode": "^1.99.0"
