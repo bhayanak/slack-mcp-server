@@ -5,7 +5,7 @@ Standalone MCP server for Slack. Publishable to npm as a global CLI tool.
 ## Installation
 
 ```bash
-npm install -g slack-mcp-server
+npm install -g @fazorboy/slack-mcp-server
 ```
 
 ## Usage

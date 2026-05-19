@@ -1,11 +1,15 @@
 {
-  "name": "slack-mcp-server",
+  "name": "@fazorboy/slack-mcp-server",
   "version": "0.1.0",
   "description": "MCP server for Slack — send messages, manage channels, search conversations, and more",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
     "slack-mcp-server": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/slack-mcp-server"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean",

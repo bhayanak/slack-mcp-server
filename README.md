@@ -43,7 +43,7 @@ SLACK_MCP_BOT_TOKEN=xoxb-your-token npx slack-mcp-server
 ### Global Install
 
 ```bash
-npm install -g slack-mcp-server
+npm install -g @fazorboy/slack-mcp-server
 SLACK_MCP_BOT_TOKEN=xoxb-your-token slack-mcp-server
 ```
 
