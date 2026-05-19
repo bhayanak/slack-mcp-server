@@ -1,0 +1,14 @@
+packages:
+  - "packages/*"
+allowBuilds:
+  '@vscode/vsce-sign': true
+  b: true
+  d: true
+  e: true
+  esbuild: true
+  i: true
+  keytar: true
+  l: true
+  s: true
+  sharp: true
+  u: true

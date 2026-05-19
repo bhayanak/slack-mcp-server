@@ -1,0 +1,24 @@
+{
+  "name": "slack-mcp-server-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm --filter slack-mcp-server run dev",
+    "test": "pnpm --filter slack-mcp-server run test",
+    "test:coverage": "pnpm --filter slack-mcp-server run test:coverage",
+    "lint": "pnpm --filter slack-mcp-server run lint",
+    "typecheck": "pnpm -r run typecheck",
+    "format": "pnpm --filter slack-mcp-server run format",
+    "ci": "pnpm --filter slack-mcp-server run ci",
+    "package": "pnpm --filter slack-mcp-vscode-extension run package",
+    "generate-logo": "tsx scripts/generate-logo.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "sharp": "^0.33.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

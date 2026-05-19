@@ -1,0 +1,7 @@
+.vscode/**
+src/**
+tsconfig.json
+build.cjs
+node_modules/**
+**/*.ts
+!dist/**

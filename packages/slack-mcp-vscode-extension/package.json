@@ -1,0 +1,175 @@
+{
+  "name": "slack-mcp-vscode-extension",
+  "displayName": "Slack MCP Server",
+  "description": "VS Code extension that provides a Slack MCP server for AI assistants",
+  "version": "0.1.0",
+  "publisher": "slack-mcp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slack-mcp/slack-mcp-server"
+  },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": ["AI", "Chat"],
+  "keywords": [
+    "mcp",
+    "mcp server",
+    "ai",
+    "model-context-protocol"
+  ],
+  "tags": [
+    "mcp",
+    "model-context-protocol"
+  ],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "icon": "logo.png",
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "slack-mcp-server",
+        "label": "Slack MCP Server"
+      }
+    ],
+    "configuration": {
+      "title": "Slack MCP Server",
+      "properties": {
+        "slackMcp.botToken": {
+          "type": "string",
+          "default": "",
+          "description": "Slack Bot User OAuth Token (xoxb-...)",
+          "order": 1
+        },
+        "slackMcp.userToken": {
+          "type": "string",
+          "default": "",
+          "description": "Slack User OAuth Token (xoxp-...)",
+          "order": 2
+        },
+        "slackMcp.xoxcToken": {
+          "type": "string",
+          "default": "",
+          "description": "Slack browser session token (xoxc-...)",
+          "order": 3
+        },
+        "slackMcp.xoxdToken": {
+          "type": "string",
+          "default": "",
+          "description": "Slack browser cookie d value (xoxd-...)",
+          "order": 4
+        },
+        "slackMcp.teamId": {
+          "type": "string",
+          "default": "",
+          "description": "Slack Workspace/Team ID (T...)",
+          "order": 5
+        },
+        "slackMcp.channelIds": {
+          "type": "string",
+          "default": "",
+          "description": "Comma-separated predefined channel IDs",
+          "order": 6
+        },
+        "slackMcp.defaultChannel": {
+          "type": "string",
+          "default": "",
+          "description": "Default channel for messaging",
+          "order": 7
+        },
+        "slackMcp.enabledTools": {
+          "type": "string",
+          "default": "",
+          "description": "Comma-separated list of enabled tools (empty = all)",
+          "order": 8
+        },
+        "slackMcp.maxResults": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum results per query",
+          "order": 9
+        },
+        "slackMcp.timeoutMs": {
+          "type": "number",
+          "default": 30000,
+          "description": "Request timeout in milliseconds",
+          "order": 10
+        },
+        "slackMcp.cacheTtl": {
+          "type": "string",
+          "default": "24h",
+          "description": "Cache TTL (e.g., 24h, 30m, 3600)",
+          "order": 11
+        },
+        "slackMcp.logLevel": {
+          "type": "string",
+          "enum": ["debug", "info", "warn", "error"],
+          "default": "info",
+          "description": "Log verbosity level",
+          "order": 12
+        },
+        "slackMcp.proxy": {
+          "type": "string",
+          "default": "",
+          "description": "Proxy URL for outgoing requests",
+          "order": 13
+        },
+        "slackMcp.govSlack": {
+          "type": "boolean",
+          "default": false,
+          "description": "Route to slack-gov.com endpoints",
+          "order": 14
+        },
+        "slackMcp.serverCaInsecure": {
+          "type": "boolean",
+          "default": false,
+          "description": "Trust insecure TLS (not recommended)",
+          "order": 15
+        },
+        "slackMcp.addMessageTool": {
+          "type": "string",
+          "default": "",
+          "description": "Enable messaging: 'true' for all, or comma-separated channel IDs",
+          "order": 16
+        },
+        "slackMcp.reactionTool": {
+          "type": "string",
+          "default": "",
+          "description": "Enable reactions: 'true' for all, or comma-separated channel IDs",
+          "order": 17
+        },
+        "slackMcp.canvasTool": {
+          "type": "string",
+          "default": "",
+          "description": "Enable canvas write tools: 'true' to enable",
+          "order": 18
+        },
+        "slackMcp.attachmentTool": {
+          "type": "string",
+          "default": "",
+          "description": "Enable attachment fetching: 'true' to enable",
+          "order": 19
+        },
+        "slackMcp.markTool": {
+          "type": "string",
+          "default": "",
+          "description": "Enable mark-as-read tool: 'true' to enable",
+          "order": 20
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "package": "node build.cjs && npx @vscode/vsce package --no-dependencies --allow-missing-repository --out slack-mcp-0.1.0.vsix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.99.0",
+    "esbuild": "^0.21.0",
+    "typescript": "^5.6.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}
