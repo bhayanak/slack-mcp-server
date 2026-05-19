@@ -8,14 +8,6 @@ VS Code extension that automatically registers the Slack MCP server, making all 
 - **VS Code Settings**: All configuration via VS Code Settings UI (no manual JSON editing)
 - **Live Reload**: Settings changes are picked up immediately without restart
 
-## Installation
-
-Install from the VSIX file:
-
-```bash
-code --install-extension slack-mcp-0.1.0.vsix
-```
-
 ## Configuration
 
 Open **Settings** → search for **"Slack MCP"**:

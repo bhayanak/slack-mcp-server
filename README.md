@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" alt="Slack MCP Server" width="50" height="50" />
+  <img src="logo.png" alt="Slack MCP Server" width="500" height="400" />
 </p>
 
 <h1 align="center">Slack MCP Server</h1>
@@ -77,22 +77,6 @@ At least one token is required:
 
 See [`.env.dist`](.env.dist) for all available environment variables.
 
-## Development
-
-```bash
-# Install dependencies
-pnpm install
-
-# Run CI checks
-pnpm run ci
-
-# Build everything
-pnpm run build
-
-# Package VS Code extension
-pnpm run package
-```
-
 ## License
 
-MIT
+[MIT](LICENSE)
