@@ -164,7 +164,7 @@
   },
   "scripts": {
     "build": "node build.cjs",
-    "package": "node build.cjs && npx @vscode/vsce package --no-dependencies --allow-missing-repository --out slack-mcp-0.1.0.vsix",
+    "package": "node build.cjs && npx @vscode/vsce package --no-dependencies --allow-missing-repository --out slack-mcp-0.1.1.vsix",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
