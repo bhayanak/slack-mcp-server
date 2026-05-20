@@ -2,7 +2,7 @@
   "name": "slack-mcp-vscode-extension",
   "displayName": "Slack MCP Server",
   "description": "VS Code extension that provides a Slack MCP server for AI assistants",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "bhayanak",
   "license": "MIT",
   "repository": {
@@ -12,16 +12,18 @@
   "engines": {
     "vscode": "^1.99.0"
   },
-  "categories": ["AI", "Chat"],
+  "categories": [
+    "AI",
+    "Chat",
+    "Model Context Protocol"
+  ],
   "keywords": [
     "mcp",
-    "mcp server",
-    "ai",
-    "model-context-protocol"
-  ],
-  "tags": [
-    "mcp",
-    "model-context-protocol"
+    "mcp-server",
+    "model-context-protocol",
+    "ai-agent",
+    "slack",
+    "copilot-extension"
   ],
   "activationEvents": ["onStartupFinished"],
   "main": "./dist/extension.js",
